@@ -1,3 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    html { font-family: 'Roboto', sans-serif; }
+    body {
+        @apply bg-white text-gray-900
+    }
+    header {
+        @apply p-4 text-center container mx-auto
+    }
+    header h1 {
+        @apply font-black text-3xl
+    }
+    header h2 {
+        @apply font-extrabold text-2xl
+    }
+    main section {
+        @apply max-w-screen-lg mx-auto
+    }
+    main section article {
+        @apply flex justify-between items-center mb-3 mx-3 sm:mx-0
+    }
+    main section article div.thumbnail {
+        @apply w-32 sm:w-40 lg:w-60 overflow-hidden mr-4
+    }
+    main section article time {
+        @apply text-sm uppercase
+    }
+    main section article p {
+        @apply line-clamp-3 break-all sm:break-normal
+    }
+    main section article figure {
+        @apply aspect-w-1 aspect-h-1
+    }
+    main section article figure img {
+        @apply object-cover object-center
+    }
+    main section article h3 a {
+        @apply font-bold text-lg lg:text-2xl line-clamp-2 lg:line-clamp-none
+    }
+    main section ul#pagination {
+        @apply font-medium flex flex-wrap justify-center items-center py-6
+    }
+    main section ul#pagination li a {
+        @apply bg-gradient-to-br from-cyan-900 to-gray-900 px-3 py-2 rounded mx-1 text-gray-100 hover:shadow-md
+    }
+    main section ul#pagination li span {
+        @apply bg-gradient-to-br from-cyan-200 to-gray-300 px-3 py-2 rounded mx-1 font-bold shadow
+    }
+    footer {
+        @apply bg-gradient-to-tr from-cyan-900 to-gray-900 text-gray-100
+    }
+    footer div {
+        @apply container mx-auto p-4
+    }
+}

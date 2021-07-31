@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
 /*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -581,4 +583,284 @@ video {
 
 [hidden] {
   display: none;
+}
+
+*, ::before, ::after{
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+header{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  header{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  header{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  header{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  header{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  header{
+    max-width: 1536px;
+  }
+}
+
+header{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 900;
+}
+
+header h2{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 800;
+}
+
+main section{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+}
+
+main section article{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px){
+  main section article{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+main section article div.thumbnail{
+  margin-right: 1rem;
+  width: 8rem;
+  overflow: hidden;
+}
+
+@media (min-width: 640px){
+  main section article div.thumbnail{
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1024px){
+  main section article div.thumbnail{
+    width: 15rem;
+  }
+}
+
+main section article time{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+main section article p{
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+@media (min-width: 640px){
+  main section article p{
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+
+main section article figure, main section article figure0, main section article figure1, main section article figure2, main section article figure3, main section article figure4, main section article figure5, main section article figure6{
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+}
+
+main section article figure > *, main section article figure0 > *, main section article figure1 > *, main section article figure2 > *, main section article figure3 > *, main section article figure4 > *, main section article figure5 > *, main section article figure6 > *{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+main section article figure{
+  --tw-aspect-w: 1;
+  --tw-aspect-h: 1;
+}
+
+main section article figure img{
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+main section article h3 a{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (min-width: 1024px){
+  main section article h3 a{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  main section article h3 a{
+    -webkit-line-clamp: unset;
+  }
+}
+
+main section ul#pagination{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+main section ul#pagination li a{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #164e63;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(22, 78, 99, 0));
+  --tw-gradient-to: #111827;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+main section ul#pagination li a:hover{
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+main section ul#pagination li span{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #a5f3fc;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(165, 243, 252, 0));
+  --tw-gradient-to: #d1d5db;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+footer{
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: #164e63;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(22, 78, 99, 0));
+  --tw-gradient-to: #111827;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+footer div{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  footer div{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  footer div{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  footer div{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  footer div{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  footer div{
+    max-width: 1536px;
+  }
+}
+
+footer div{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
 }

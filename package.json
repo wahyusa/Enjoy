@@ -17,7 +17,11 @@
     "url": "https://github.com/wahyusa/Enjoy/issues"
   },
   "homepage": "https://github.com/wahyusa/Enjoy#readme",
-  "dependencies": {
+  "devDependencies": {
     "tailwindcss": "^2.2.7"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/line-clamp": "^0.2.1"
   }
 }
