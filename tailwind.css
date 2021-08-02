@@ -24,6 +24,9 @@
     main {
         @apply max-w-screen-lg mx-auto flex flex-col justify-center sm:flex-row sm:divide-x sm:divide-gray-400 py-3
     }
+    main section {
+        @apply md:w-4/6
+    }
     main section div#index article {
         @apply flex justify-between items-center p-3
     }
@@ -57,22 +60,25 @@
     main section ul#pagination li span {
         @apply bg-gradient-to-br from-blue-200 to-gray-300 px-3 py-2 rounded mx-1 font-bold shadow
     }
-    main aside div#index article {
+    main aside {
+        @apply md:w-2/6
+    }
+    main aside div#index-aside article {
         @apply flex justify-between items-center p-3
     }
-    main aside div#index article div.thumbnail {
+    main aside div#index-aside article div.thumbnail {
         @apply w-24 overflow-hidden mr-3
     }
     main aside article time {
         @apply text-sm uppercase text-gray-600 font-medium
     }
-    main aside div#index article figure {
+    main aside div#index-aside article figure {
         @apply aspect-w-1 aspect-h-1
     }
     main aside article div.thumbnail figure img {
         @apply object-cover object-center rounded shadow-sm
     }
-    main aside div#index article h3 a {
+    main aside div#index-aside article h3 a {
         @apply line-clamp-2 lg:line-clamp-3
     }
     main aside article h3 a {
@@ -81,7 +87,7 @@
     footer {
         @apply bg-gray-900 text-gray-100
     }
-    footer div {
+    footer div.footer-wrap {
         @apply container mx-auto p-4
     }
     main div#single {

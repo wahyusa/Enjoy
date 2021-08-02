@@ -687,6 +687,12 @@ main{
   }
 }
 
+@media (min-width: 768px){
+  main section{
+    width: 66.666667%;
+  }
+}
+
 main section div#index article{
   display: flex;
   align-items: center;
@@ -861,14 +867,20 @@ main section ul#pagination li span{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-main aside div#index article{
+@media (min-width: 768px){
+  main aside{
+    width: 33.333333%;
+  }
+}
+
+main aside div#index-aside article{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem;
 }
 
-main aside div#index article div.thumbnail{
+main aside div#index-aside article div.thumbnail{
   margin-right: 0.75rem;
   width: 6rem;
   overflow: hidden;
@@ -883,12 +895,12 @@ main aside article time{
   color: rgba(71, 85, 105, var(--tw-text-opacity));
 }
 
-main aside div#index article figure, main aside div#index article figure0, main aside div#index article figure1, main aside div#index article figure2, main aside div#index article figure3, main aside div#index article figure4, main aside div#index article figure5, main aside div#index article figure6{
+main aside div#index-aside article figure, main aside div#index-aside article figure0, main aside div#index-aside article figure1, main aside div#index-aside article figure2, main aside div#index-aside article figure3, main aside div#index-aside article figure4, main aside div#index-aside article figure5, main aside div#index-aside article figure6{
   position: relative;
   padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
 }
 
-main aside div#index article figure > *, main aside div#index article figure0 > *, main aside div#index article figure1 > *, main aside div#index article figure2 > *, main aside div#index article figure3 > *, main aside div#index article figure4 > *, main aside div#index article figure5 > *, main aside div#index article figure6 > *{
+main aside div#index-aside article figure > *, main aside div#index-aside article figure0 > *, main aside div#index-aside article figure1 > *, main aside div#index-aside article figure2 > *, main aside div#index-aside article figure3 > *, main aside div#index-aside article figure4 > *, main aside div#index-aside article figure5 > *, main aside div#index-aside article figure6 > *{
   position: absolute;
   height: 100%;
   width: 100%;
@@ -898,7 +910,7 @@ main aside div#index article figure > *, main aside div#index article figure0 > 
   left: 0;
 }
 
-main aside div#index article figure{
+main aside div#index-aside article figure{
   --tw-aspect-w: 1;
   --tw-aspect-h: 1;
 }
@@ -913,7 +925,7 @@ main aside article div.thumbnail figure img{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-main aside div#index article h3 a{
+main aside div#index-aside article h3 a{
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -921,7 +933,7 @@ main aside div#index article h3 a{
 }
 
 @media (min-width: 1024px){
-  main aside div#index article h3 a{
+  main aside div#index-aside article h3 a{
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -954,41 +966,41 @@ footer{
   color: rgba(241, 245, 249, var(--tw-text-opacity));
 }
 
-footer div{
+footer div.footer-wrap{
   width: 100%;
 }
 
 @media (min-width: 640px){
-  footer div{
+  footer div.footer-wrap{
     max-width: 640px;
   }
 }
 
 @media (min-width: 768px){
-  footer div{
+  footer div.footer-wrap{
     max-width: 768px;
   }
 }
 
 @media (min-width: 1024px){
-  footer div{
+  footer div.footer-wrap{
     max-width: 1024px;
   }
 }
 
 @media (min-width: 1280px){
-  footer div{
+  footer div.footer-wrap{
     max-width: 1280px;
   }
 }
 
 @media (min-width: 1536px){
-  footer div{
+  footer div.footer-wrap{
     max-width: 1536px;
   }
 }
 
-footer div{
+footer div.footer-wrap{
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
@@ -1181,9 +1193,21 @@ main div#single article div#single-meta{
   margin: 0.75rem;
 }
 
+.m-1{
+  margin: 0.25rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.mr-1{
+  margin-right: 0.25rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .flex{
@@ -1200,6 +1224,14 @@ main div#single article div#single-meta{
 
 .flex-col{
   flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.items-center{
+  align-items: center;
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]){
@@ -1233,4 +1265,10 @@ main div#single article div#single-meta{
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 640px){
+  .sm\:mr-3{
+    margin-right: 0.75rem;
+  }
 }
