@@ -460,18 +460,18 @@ textarea {
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
 button,
@@ -601,7 +601,7 @@ body{
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  color: rgba(15, 23, 42, var(--tw-text-opacity));
 }
 
 header {
@@ -656,34 +656,46 @@ header h1{
 header h2{
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
+  color: rgba(51, 65, 85, var(--tw-text-opacity));
 }
 
-main section{
+main{
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
-}
-
-main section div#index article{
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 1024px;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
 @media (min-width: 640px){
-  main section div#index article{
-    margin-left: 0px;
-    margin-right: 0px;
+  main{
+    flex-direction: row;
+  }
+
+  main > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--tw-divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
+  main > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-opacity: 1;
+    border-color: rgba(148, 163, 184, var(--tw-divide-opacity));
   }
 }
 
+main section div#index article{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+
 main section div#index article div.thumbnail{
-  margin-right: 1rem;
+  margin-right: 0.75rem;
   width: 6rem;
   overflow: hidden;
 }
@@ -706,7 +718,7 @@ main section article time{
   font-weight: 500;
   text-transform: uppercase;
   --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
+  color: rgba(71, 85, 105, var(--tw-text-opacity));
 }
 
 main section div#index article p{
@@ -769,7 +781,10 @@ main section div#index article h3 a{
 
 @media (min-width: 1024px){
   main section div#index article h3 a{
-    -webkit-line-clamp: unset;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }
 
@@ -788,7 +803,7 @@ main section article h3 a{
 
 main section article h3 a:hover{
   --tw-text-opacity: 1;
-  color: rgba(6, 78, 59, var(--tw-text-opacity));
+  color: rgba(30, 58, 138, var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px){
@@ -813,15 +828,15 @@ main section ul#pagination li a{
   margin-right: 0.25rem;
   border-radius: 0.25rem;
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-  --tw-gradient-from: #064e3b;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(6, 78, 59, 0));
-  --tw-gradient-to: #111827;
+  --tw-gradient-from: #1e3a8a;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(30, 58, 138, 0));
+  --tw-gradient-to: #0f172a;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
-  color: rgba(243, 244, 246, var(--tw-text-opacity));
+  color: rgba(241, 245, 249, var(--tw-text-opacity));
 }
 
 main section ul#pagination li a:hover{
@@ -834,9 +849,9 @@ main section ul#pagination li span{
   margin-right: 0.25rem;
   border-radius: 0.25rem;
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-  --tw-gradient-from: #a7f3d0;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(167, 243, 208, 0));
-  --tw-gradient-to: #d1d5db;
+  --tw-gradient-from: #bfdbfe;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 219, 254, 0));
+  --tw-gradient-to: #cbd5e1;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
@@ -846,13 +861,97 @@ main section ul#pagination li span{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-footer{
-  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-  --tw-gradient-from: #111827;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(17, 24, 39, 0));
-  --tw-gradient-to: #064e3b;
+main aside div#index article{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+
+main aside div#index article div.thumbnail{
+  margin-right: 0.75rem;
+  width: 6rem;
+  overflow: hidden;
+}
+
+main aside article time{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
   --tw-text-opacity: 1;
-  color: rgba(243, 244, 246, var(--tw-text-opacity));
+  color: rgba(71, 85, 105, var(--tw-text-opacity));
+}
+
+main aside div#index article figure, main aside div#index article figure0, main aside div#index article figure1, main aside div#index article figure2, main aside div#index article figure3, main aside div#index article figure4, main aside div#index article figure5, main aside div#index article figure6{
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+}
+
+main aside div#index article figure > *, main aside div#index article figure0 > *, main aside div#index article figure1 > *, main aside div#index article figure2 > *, main aside div#index article figure3 > *, main aside div#index article figure4 > *, main aside div#index article figure5 > *, main aside div#index article figure6 > *{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+main aside div#index article figure{
+  --tw-aspect-w: 1;
+  --tw-aspect-h: 1;
+}
+
+main aside article div.thumbnail figure img{
+  border-radius: 0.25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+main aside div#index article h3 a{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (min-width: 1024px){
+  main aside div#index article h3 a{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+main aside article h3 a{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 150ms;
+}
+
+main aside article h3 a:hover{
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity));
+}
+
+footer{
+  --tw-bg-opacity: 1;
+  background-color: rgba(15, 23, 42, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(241, 245, 249, var(--tw-text-opacity));
 }
 
 footer div{
@@ -895,19 +994,85 @@ footer div{
   padding: 1rem;
 }
 
-main section div#single{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
+main div#single{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
-main section div#single article{
+main div#single article{
   margin: 0.75rem;
 }
 
-main section div#single article h3 a{
+main div#single article time{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(71, 85, 105, var(--tw-text-opacity));
+}
+
+main div#single article div#single-content p{
+  margin-bottom: 0.75rem;
+}
+
+main div#single article div#single-content h4{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+main div#single article div#single-content a{
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(37, 99, 235, var(--tw-text-opacity));
+}
+
+main div#single article div#single-content a:hover{
+  text-decoration: underline;
+}
+
+main div#single article div#single-content ul{
+  margin: 0.75rem;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+main div#single article div#single-content ol{
+  margin: 0.75rem;
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+main div#single article div#single-content figure{
+  margin: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main div#single article div#single-content figure img{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+main div#single article div#single-content figure figcaption{
+  display: inline-flex;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+main div#single article h3 a{
   display: block;
   text-align: center;
   font-size: 1.5rem;
@@ -915,40 +1080,40 @@ main section div#single article h3 a{
 }
 
 @media (min-width: 640px){
-  main section div#single article h3 a{
+  main div#single article h3 a{
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
 }
 
-main section div#single article div.thumbnail{
+main div#single article div.thumbnail{
   margin-bottom: 0.75rem;
   max-width: 100%;
 }
 
 @media (min-width: 640px){
-  main section div#single article div.thumbnail{
+  main div#single article div.thumbnail{
     margin-left: auto;
     margin-right: auto;
   }
 
-  main section div#single article div.thumbnail{
+  main div#single article div.thumbnail{
     max-width: 600px;
   }
 }
 
 @media (min-width: 1024px){
-  main section div#single article div.thumbnail{
+  main div#single article div.thumbnail{
     max-width: 768px;
   }
 }
 
-main section div#single article div.thumbnail figure{
+main div#single article div.thumbnail figure{
   position: relative;
   padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
 }
 
-main section div#single article div.thumbnail figure > *{
+main div#single article div.thumbnail figure > *{
   position: absolute;
   height: 100%;
   width: 100%;
@@ -958,18 +1123,53 @@ main section div#single article div.thumbnail figure > *{
   left: 0;
 }
 
-main section div#single article div.thumbnail figure{
+main div#single article div.thumbnail figure{
   --tw-aspect-w: 16;
   --tw-aspect-h: 9;
 }
 
 @media (min-width: 640px){
-  main section div#single article div.thumbnail figure{
+  main div#single article div.thumbnail figure{
     --tw-aspect-h: 8;
   }
 }
 
-main section div#single article div#single-meta{
+main div#single article div.thumbnail figure img{
+  border-radius: 0.25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+main div#single article h3 a{
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 150ms;
+}
+
+main div#single article h3 a:hover{
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  main div#single article h3 a{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+main div#single article div#single-meta{
   margin-bottom: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -977,8 +1177,21 @@ main section div#single article div#single-meta{
   justify-content: center;
 }
 
+.m-3{
+  margin: 0.75rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flex{
   display: flex;
+}
+
+.max-w-\[320px\]{
+  max-width: 320px;
 }
 
 .flex-1{
@@ -997,7 +1210,16 @@ main section div#single article div#single-meta{
 
 .divide-gray-400 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
-  border-color: rgba(156, 163, 175, var(--tw-divide-opacity));
+  border-color: rgba(148, 163, 184, var(--tw-divide-opacity));
+}
+
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
 
 .p-3{
@@ -1006,4 +1228,9 @@ main section div#single article div#single-meta{
 
 .font-medium{
   font-weight: 500;
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
