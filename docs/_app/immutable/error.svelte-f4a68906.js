@@ -15,7 +15,7 @@ import {
 	l as C,
 	m as j,
 	n as H
-} from './chunks/index-bf1ed64f.js';
+} from './chunks/index-af23cb06.js';
 function J(r) {
 	let l,
 		t = r[1].frame + '',

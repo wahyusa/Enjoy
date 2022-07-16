@@ -2,10 +2,10 @@
 	"name": "revenge",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "NODE_ENV=development && vite dev",
-		"build": "NODE_ENV=production && vite build",
+		"dev": "export NODE_ENV=development && echo $NODE_ENV && vite dev",
+		"build": "export NODE_ENV=production && echo $NODE_ENV && vite build",
 		"package": "svelte-kit package",
-		"preview": "NODE_ENV=production && vite preview",
+		"preview": "export NODE_ENV=production && echo $NODE_ENV && vite preview",
 		"prepare": "svelte-kit sync",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
