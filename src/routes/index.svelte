@@ -1,3 +1,26 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const intersectionHeader = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					entry.target.classList.toggle('opacity-[1!important]', entry.isIntersecting);
+					entry.target.classList.toggle('translate-x-[0!important]', entry.isIntersecting);
+				});
+			},
+			{
+				threshold: 0.5
+			}
+		);
+
+		const sections = document.querySelectorAll('#svelte-aos');
+		sections.forEach((section) => {
+			intersectionHeader.observe(section);
+		});
+	});
+</script>
+
 <nav>
 	<div class="py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<ul class="flex justify-between items-center">
@@ -69,7 +92,8 @@
 		</ul>
 	</div>
 </nav>
-<header>
+
+<header class="transition-all duration-500 opacity-0" id="svelte-aos">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-32 md:pb-16 text-center lg:pt-32">
 		<h1
 			class="mx-auto max-w-4xl font-display text-4xl xs:text-5xl sm:text-7xl font-medium tracking-tight text-slate-900"
@@ -88,12 +112,12 @@
 	</div>
 </header>
 
-<section>
+<section class="transition-all duration-500 opacity-0" id="svelte-aos">
 	<div class="h-screen flex flex-col items-center justify-center">
 		<div
 			class="grid items-center grid-cols-1 lg:grid-cols-2 text-lg gap-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
 		>
-			<div>
+			<div class="transition-all duration-700 opacity-0 -translate-x-[100px]" id="svelte-aos">
 				<!-- svelte-ignore a11y-media-has-caption -->
 				<video autoplay muted loop class="w-full">
 					<source src="https://media.giphy.com/media/3o7btLQQQXyQ/giphy.mp4" type="video/mp4" />
@@ -113,7 +137,7 @@
 	</div>
 </section>
 
-<section>
+<section class="transition-all duration-500 opacity-0" id="svelte-aos">
 	<div class="h-screen flex flex-col items-center justify-center bg-red-100">
 		<div
 			class="bg-yellow-100 grid items-center justify-center grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32"
