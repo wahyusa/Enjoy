@@ -6,7 +6,6 @@
 			(entries) => {
 				entries.forEach((entry) => {
 					entry.target.classList.toggle('opacity-[1!important]', entry.isIntersecting);
-					entry.target.classList.toggle('translate-x-[0!important]', entry.isIntersecting);
 				});
 			},
 			{
@@ -20,6 +19,11 @@
 		});
 	});
 </script>
+
+<svelte:head>
+	<meta name="description" content="I just want to revenge LoL">
+	<title>REVENGE</title>
+</svelte:head>
 
 <nav>
 	<div class="py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -117,7 +121,7 @@
 		<div
 			class="grid items-center grid-cols-1 lg:grid-cols-2 text-lg gap-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
 		>
-			<div class="transition-all duration-700 opacity-0 -translate-x-[100px]" id="svelte-aos">
+			<div class="transition-all duration-700 opacity-0" id="svelte-aos">
 				<!-- svelte-ignore a11y-media-has-caption -->
 				<video autoplay muted loop class="w-full">
 					<source src="https://media.giphy.com/media/3o7btLQQQXyQ/giphy.mp4" type="video/mp4" />
